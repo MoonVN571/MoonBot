@@ -16,7 +16,7 @@ function getPlayersList(bot) {
 
 async function getCountPlayersAPI() {
     let players = 0;
-    await axios.default.get('https://api.mcsrvstat.us/2/2b2c.org').then(res => {
+    await axios.default.get('https://api.mcsrvstat.us/2/mc.2y2cpvp.tk').then(res => {
         players = res.data.players?.online;
     });
     if(isNaN(players)) players = 0;

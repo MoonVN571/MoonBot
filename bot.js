@@ -16,27 +16,25 @@ let config = {
 }
 
 let channel = {
-    livechat: config.dev ? "987204059838709780" : "996797558993190922",
+    livechat: config.dev ? "987204059838709780" : "1000602196821413988",
     join: config.dev ? "987204116839284756" : "996797558993190922",
-    log: config.dev ? "995936735852769320" : "996797576206618645",
-    server: config.dev ? "987204092113879040" : "996797600554565642",
+    log: config.dev ? "995936735852769320" : "1000602213762216067",
+    server: config.dev ? "987204092113879040" : "1000602409061589083",
     commands: config.dev ? "990104136018182154" : "996797865378709674",
-    stats: config.dev ? "998406738011234346" : "998848503545606364"
+    stats: config.dev ? "998406738011234346" : "1000602225208467457"
 }
 
 function createBot() {
     const bot = m.createBot({
-        host: '2b2c.org',
+        host: 'mc.2y2cpvp.tk',
         port: 25565,
         username: config.botName,
         version: '1.16.5'
     });
 
-    // Chạm được nè
     bot.adminName = manager.adminGame;
     bot.notFoundPlayers = set.notFoundPlayers;
 
-    // đừng đụng zô
     bot.client = main.client;
     bot.config = config;
 

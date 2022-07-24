@@ -58,7 +58,7 @@ module.exports = {
                     if (!bot.data.logged) return interaction.reply({ content: "Bot chưa kết nối vào server thử lại sau!", ephemeral: true });
 
                     if (interaction.customId == 'botinfo') {
-                        let embed = await getEmbed(interaction);
+                        let embed = await getEmbed();
                         msg.edit({ embeds: [embed] });
                     }
 
@@ -94,7 +94,7 @@ module.exports = {
                 return arr;
             }
 
-            async function getEmbed(interaction) {
+            async function getEmbed() {
                 let coords = getCoords(bot);
                 let players = getPlayersList(bot);
 
@@ -144,7 +144,7 @@ module.exports = {
                     fields: fields,
                     color: Colors.Blue,
                     footer: {
-                        text: interaction ? 'Yêu cầu bởi ' + interaction.user.tag : "Bấm vào nút Update dể cập nhật thông tin!",
+                        text: "Bấm vào nút Update dể cập nhật thông tin!",
                     },
                     timestamp: new Date().toISOString()
                 };
